@@ -1,4 +1,5 @@
 // Time: 100ms (45.93%) | Memory: 14.52 (85.93%)
+//
 void swap(int* a, int* b) {
     int t = *a;
     *a = *b;
