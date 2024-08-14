@@ -1,4 +1,4 @@
-// Time: 128ms (89.72%) | Memory: 57.64 (45.78%)
+// Time: 123ms (96.43%) | Memory: 57.78 (34.52%)
 function numRescueBoats(people: number[], limit: number): number {
   let left = 0;
   let right = people.length - 1;
@@ -6,14 +6,10 @@ function numRescueBoats(people: number[], limit: number): number {
 
   people.sort((a, b) => a - b);
   while (left <= right) {
-    if (people[right] == limit) {
-      ans++;
-    } else if (people[right] < limit) {
-      if (people[left] + people[right] <= limit && right != left) {
-        left++;
-      }
-      ans++;
+    if (people[left] + people[right] <= limit && right != left) {
+      left++;
     }
+    ans++;
     right--;
   }
 
