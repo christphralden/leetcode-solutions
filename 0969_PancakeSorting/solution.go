@@ -1,4 +1,4 @@
-// Time: 0ms (100%) | Memory: 2.54 (36.67%)
+// Time: 0ms (100%) | Memory: 2.54 ()
 package main
 
 import "fmt"
@@ -12,7 +12,6 @@ func max(arr *[]int, left int, right int) int {
   }
   return max
 }
-
 func swap(arr *[]int, x int, y int){
   (*arr)[x], (*arr)[y] = (*arr)[y], (*arr)[x]
 }
